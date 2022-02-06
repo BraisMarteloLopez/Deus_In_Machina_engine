@@ -1,0 +1,22 @@
+plugins/
+/plugins
+
+.vs/
+/.vs
+
+include/
+/include
+
+lib/
+/lib
+
+x64/
+/x64/
+
+
+Deus Ex Machina engine.vcxproj
+Deus Ex Machina engine.sln
+Deus Ex Machina engine.vcxproj.filters
+Deus Ex Machina engine.vcxproj.user
+glad.c
+Deus Ex Machina engine.cpp
