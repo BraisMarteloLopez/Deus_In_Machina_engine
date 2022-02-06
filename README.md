@@ -14,9 +14,9 @@ The skeletical animation system should not have numbers reestrictions about numb
 
 # Dependencies
 
--ASSIMP: `vcpkg install assimp`.
--GLM: `vcpkg install glm`.
--GLAD: `vcpkg install glad`.
--GLFW: `vcpkg install glfw3`.
+- ASSIMP: `vcpkg install assimp`.
+- GLM: `vcpkg install glm`.
+- GLAD: `vcpkg install glad`.
+- GLFW: `vcpkg install glfw3`.
 
 
