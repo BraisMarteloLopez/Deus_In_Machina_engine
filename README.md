@@ -12,3 +12,11 @@ The skeletical animation system should not have numbers reestrictions about numb
 ![Atlas_animations](https://user-images.githubusercontent.com/5490676/152705358-25342061-576e-4ad1-83c9-c67bb173c9ab.jpg)
 
 
+# Dependencies
+
+-ASSIMP: `vcpkg install assimp`.
+-GLM: `vcpkg install glm`.
+-GLAD: `vcpkg install glad`.
+-GLFW: `vcpkg install glfw3`.
+
+
