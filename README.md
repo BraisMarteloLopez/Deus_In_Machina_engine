@@ -2,7 +2,7 @@
 C++/GL/Vulkan 3D graphic engine
 ```
 First commit, hello world! :D
-Reddit post about why I started with skeletal animation system and talking about future updates: 
+Reddit post about why I started with skeletal animation system and talking about future updates: https://www.reddit.com/r/BirthOfCivilization/comments/smbddl/deus_ex_machina_engine_first_public_repository/
 ```
 
 
