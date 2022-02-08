@@ -18,13 +18,13 @@
 			startRange = _startRange;
 			name = _name;
 
-			animation = animationLoader(_path, _boneInfo);
+			animation = animationLoader(_path, _boneInfo).animation;
 		};
 
 		std::string name = "";
 		GLuint startRange = 0;
 
-		animationLoader animation;
+		Animation animation;
 	};
 
 
@@ -73,13 +73,13 @@
 
 			//
 
-			for (GLuint i = 0; i < skeletons[indexSk].animations[indexAnim].animation.animation._nTicks; i++)
+			for (GLuint i = 0; i < skeletons[indexSk].animations[indexAnim].animation._nTicks; i++)
 			{
 
-				skeletons[indexSk].animations[indexAnim].animation.animation.update(i);
+				skeletons[indexSk].animations[indexAnim].animation.update(i);
 
-				for (GLuint j = 0; j < skeletons[indexSk].animations[indexAnim].animation.animation._bones_count; j++)
-					array_animation.push_back(skeletons[indexSk].animations[indexAnim].animation.animation._transforms[j]);
+				for (GLuint j = 0; j < skeletons[indexSk].animations[indexAnim].animation._bones_count; j++)
+					array_animation.push_back(skeletons[indexSk].animations[indexAnim].animation._transforms[j]);
 			}
 
 			skeletons[indexSk].lastRange = array_animation.size();

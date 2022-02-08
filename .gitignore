@@ -1,8 +1,8 @@
+/Debug
+Debug/
+
 plugins/
 /plugins
-
-.vs/
-/.vs
 
 include/
 /include
@@ -14,9 +14,8 @@ x64/
 /x64/
 
 
-Deus Ex Machina engine.vcxproj
-Deus Ex Machina engine.sln
-Deus Ex Machina engine.vcxproj.filters
-Deus Ex Machina engine.vcxproj.user
+Deus_Ex_Machina_engine.vcxproj
+Deus_Ex_Machina_engine.vcxproj.filters
+Deus_Ex_Machina_engine.vcxproj.user
 glad.c
-Deus Ex Machina engine.cpp
+Deus_Ex_Machina_engine.cpp
