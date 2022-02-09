@@ -58,12 +58,6 @@
 		assert((scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE) == 0);
 		assert(scene->mRootNode);
 
-		if (!scene || scene->mFlags & AI_SCENE_FLAGS_INCOMPLETE || !scene->mRootNode)
-		{
-			std::cout << "xERROR::ASSIMP:: " << importer.GetErrorString() << std::endl;
-			return;
-		}
-
 		//
 
 		std::vector<AnimMesh> anim_meshes = Assimp_LoadModelMeshWithAnimationsWeights(*scene, _skeletonItem.skeleton);
