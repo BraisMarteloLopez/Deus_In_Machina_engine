@@ -35,7 +35,7 @@
 	using BoneIndex = GLint;
 
 
-	struct AnimVertex
+	struct VertexWBone
 	{
 		glm::vec3 position;
 		glm::vec3 normal;
@@ -127,7 +127,7 @@
 	struct AnimMesh
 	{
 
-		std::vector<AnimVertex> vertices;
+		std::vector<VertexWBone> vertices;
 		std::vector<GLuint> indices;
 	};
 
@@ -185,7 +185,7 @@
 	};
 
 
-	struct VertexWBone {
+	/*struct VertexWBone {
 
 		glm::vec3 Position;
 		glm::vec3 Normal;
@@ -194,7 +194,7 @@
 
 		glm::vec4 Ids;
 		glm::vec4 Weights;
-	};
+	};*/
 
 
 	struct Animation
@@ -296,7 +296,7 @@
 	static AnimMesh Assimp_LoadMesh(const aiScene& scene, const aiMesh& mesh, const BoneInfoMap& bone_info)
 	{
 
-		std::vector<AnimVertex> vertices;
+		std::vector<VertexWBone> vertices;
 		vertices.reserve(mesh.mNumVertices);
 
 		for (GLuint i = 0; i < mesh.mNumVertices; ++i)
@@ -311,14 +311,14 @@
 
 			//
 
-			vertices.push_back(AnimVertex{});
-			AnimVertex& v = vertices.back();
+			vertices.push_back(VertexWBone{});
+			VertexWBone& v = vertices.back();
 
 			v.position = Vec_ToGLM(mesh.mVertices[i]);
 			v.normal = Vec_ToGLM(mesh.mNormals[i]);
 			v.texture_uv = glm::vec2(uvs[i].x, uvs[i].y);
 			v.tangent = Vec_ToGLM(mesh.mTangents[i]);
-			v.bitangent = Vec_ToGLM(mesh.mBitangents[i]);
+			//v.bitangent = Vec_ToGLM(mesh.mBitangents[i]);
 
 			//
 
@@ -340,7 +340,7 @@
 		}
 
 
-		auto add_bone_weight_to_vertex = [](AnimVertex& vertex, const BoneIndex bone_index, GLfloat weight)
+		auto add_bone_weight_to_vertex = [](VertexWBone& vertex, const BoneIndex bone_index, GLfloat weight)
 		{
 
 			auto it = std::find_if(std::begin(vertex.bone_ids), std::end(vertex.bone_ids)

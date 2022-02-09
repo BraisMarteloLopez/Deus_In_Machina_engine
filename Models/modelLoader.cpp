@@ -74,55 +74,6 @@
 	Mesh modelLoader::processMeshWithAnim(AnimMesh& mesh, GLuint skeletonRange, Animation& animation, const BoneInfoMap& boneInfo, const aiScene* scene)
 	{
 
-		std::vector<VertexWBone> vertices;
-		std::vector<GLuint> indices;
 
-		unsigned char ids[max_weigths];
-		GLfloat weights[max_weigths];
-
-		//
-
-		for (GLuint i = 0, j = 0; i < mesh.vertices.size(); i++)
-		{
-
-			VertexWBone vertex;
-
-			//
-
-			for (GLint j = 0; j < max_weigths; j++)
-			{
-
-				if (mesh.vertices[i].bone_ids[j] >= 0)
-				{
-
-					ids[j] = skeletonRange + mesh.vertices[i].bone_ids[j];
-					weights[j] = mesh.vertices[i].weights[j];
-				}
-			}
-
-			vertex.Ids.x = ids[0];
-			vertex.Ids.y = ids[1];
-			vertex.Ids.z = ids[2];
-			vertex.Ids.w = ids[3];
-
-			vertex.Weights.x = weights[0];
-			vertex.Weights.y = weights[1];
-			vertex.Weights.z = weights[2];
-			vertex.Weights.w = weights[3];
-
-			//
-
-			vertex.Position = mesh.vertices[i].position;
-			vertex.Normal = mesh.vertices[i].normal;
-			vertex.Tangent = mesh.vertices[i].tangent;
-
-			vertex.TexCoords.x = mesh.vertices[i].texture_uv.x;
-			vertex.TexCoords.y = 1 - mesh.vertices[i].texture_uv.y;
-
-			//
-
-			vertices.push_back(vertex);
-		}
-
-		return Mesh(vertices, mesh.indices);
+		return Mesh(mesh.vertices, mesh.indices);
 	}
