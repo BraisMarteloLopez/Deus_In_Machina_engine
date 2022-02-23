@@ -38,8 +38,8 @@
 	{
 
 
-		modelLoader(const std::string&, GLuint startRangeAnim, const skeletonLoader& _skeletonItem, animationLoader& _animationLoader);
-		Mesh processMeshWithAnim(AnimMesh& mesh, GLuint skeletonRange, Animation& animation, const BoneInfoMap& boneInfo, const aiScene* scene);
+		modelLoader(const std::string&, const skeletonLoader& _skeletonItem, animationLoader& _animationLoader);
+		Mesh processMeshWithAnim(std::vector<AnimMesh>& meshes, Animation& animation, const BoneInfoMap& boneInfo, const aiScene* scene);
 		
 		std::vector<Mesh> meshes;
 	};

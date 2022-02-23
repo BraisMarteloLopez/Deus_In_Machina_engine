@@ -6,24 +6,19 @@
 	#include "../AuxHeadersDef/Core_Headers.h"
 	#include "../AuxHeadersDef/Aux_Headers.h"
 	#include "../AuxHeadersDef/Stream_Headers.h"
+
 	#include <glm/glm.hpp>
+
 	#include <assimp/Importer.hpp>
 	#include <assimp/scene.h>
 	#include <assimp/matrix4x4.h>
-	#include <assimp/postprocess.h>
 	#include <assimp/Quaternion.h>
 	#include <assimp/vector3.h>
 	#include <glm/gtx/quaternion.hpp>
+
 	#include <map>
 	#include <stack>
-	#include <string>
-	#include <string_view>
-	#include <span>
-	#include <vector>
 	#include <optional>
-	#include <iterator>
-	#include <algorithm>
-	#include <filesystem>
 	#include <cmath>
 	#include <cassert>
 
@@ -184,19 +179,6 @@
 		glm::vec3 Bitangent;
 	};
 
-
-	/*struct VertexWBone {
-
-		glm::vec3 Position;
-		glm::vec3 Normal;
-		glm::vec2 TexCoords;
-		glm::vec3 Tangent;
-
-		glm::vec4 Ids;
-		glm::vec4 Weights;
-	};*/
-
-
 	struct Animation
 	{
 
@@ -210,7 +192,7 @@
 				_nodes.push_back(nodes[i]);
 
 				if (_nodes[i].bone && _nTicks == 0)
-					_nTicks = _nodes[i].bone->_positions.size();
+					_nTicks = (GLuint)_nodes[i].bone->_positions.size();
 			}
 
 			for (GLuint i = 0; i < bones_count + 1; i++)
@@ -272,7 +254,7 @@
 
 		GLuint _bones_count = 0;
 		GLuint _nTicks = 0;
-		GLuint _ticks_per_second = 0;
+		GLfloat _ticks_per_second = 0.0f;
 		GLfloat _duration = 0.0f;
 	};
 

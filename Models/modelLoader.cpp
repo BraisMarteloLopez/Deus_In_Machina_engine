@@ -42,7 +42,7 @@
 	}
 
 
-	modelLoader::modelLoader(const std::string& _path, GLuint skeletonRange, const skeletonLoader& _skeletonItem, animationLoader& _animationItem)
+	modelLoader::modelLoader(const std::string& _path, const skeletonLoader& _skeletonItem, animationLoader& _animationItem)
 	{
 
 
@@ -61,13 +61,30 @@
 		//
 
 		std::vector<AnimMesh> anim_meshes = Assimp_LoadModelMeshWithAnimationsWeights(*scene, _skeletonItem.skeleton);
-		meshes.push_back(processMeshWithAnim(anim_meshes[0], skeletonRange, _animationItem.animation, _skeletonItem.skeleton, scene));
+		meshes.push_back(processMeshWithAnim(anim_meshes, _animationItem.animation, _skeletonItem.skeleton, scene));
 	}
 
 
-	Mesh modelLoader::processMeshWithAnim(AnimMesh& mesh, GLuint skeletonRange, Animation& animation, const BoneInfoMap& boneInfo, const aiScene* scene)
+	Mesh modelLoader::processMeshWithAnim(std::vector<AnimMesh>& meshes, Animation& animation, const BoneInfoMap& boneInfo, const aiScene* scene)
 	{
 
+		std::vector<VertexWBone> vertices;
+		std::vector<GLuint> indices;
 
-		return Mesh(mesh.vertices, mesh.indices);
+		//
+
+		for (GLuint mesh = 0, prev_count = 0; mesh < (GLuint)meshes.size(); mesh++, prev_count = (GLuint)indices.size())
+		{
+
+			vertices.insert(vertices.end(), meshes[mesh].vertices.begin(), meshes[mesh].vertices.end());
+
+			//
+
+			for (GLuint k = 0; k < meshes[mesh].indices.size(); k++)
+				indices.push_back(meshes[mesh].indices[k] + prev_count);
+		}
+
+
+
+		return Mesh(vertices, indices);
 	}

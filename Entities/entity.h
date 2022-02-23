@@ -46,7 +46,6 @@
 		std::vector<struct entityAnimation> animations;
 
 		GLint anim_idle_ID = -1;
-		GLint anim_select_ID = -1;
 		GLint anim_attack_ID = -1;
 	};
 
@@ -59,14 +58,14 @@
 		void addSkeleton(const std::string _path, std::string _name)
 		{
 
-			skeletons.push_back(entitySkeleton(_path, _name, array_animation.size()));
+			skeletons.push_back(entitySkeleton(_path, _name, (GLuint)array_animation.size()));
 		};
 
 		void addAnimation(const std::string _path, std::string _name, GLint& _type)
 		{
 
-			GLuint indexSk = skeletons.size() - 1;
-			GLuint indexAnim = skeletons[indexSk].animations.size();
+			GLuint indexSk = (GLuint)skeletons.size() - 1;
+			GLuint indexAnim = (GLuint)skeletons[indexSk].animations.size();
 
 			_type = indexAnim;
 			skeletons[indexSk].animations.push_back(entityAnimation(_path, _name, skeletons[indexSk].skeleton.skeleton, skeletons[indexSk].lastRange));
@@ -82,7 +81,7 @@
 					array_animation.push_back(skeletons[indexSk].animations[indexAnim].animation._transforms[j]);
 			}
 
-			skeletons[indexSk].lastRange = array_animation.size();
+			skeletons[indexSk].lastRange = (GLuint)array_animation.size();
 		};
 
 
@@ -104,7 +103,6 @@
 		}
 
 		GLint& linkIdle() { return skeletons[skeletons.size() - 1].anim_idle_ID; }
-		GLint& linkSelect() { return skeletons[skeletons.size() - 1].anim_select_ID; }
 		GLint& linkAttack() { return skeletons[skeletons.size() - 1].anim_attack_ID; }
 
 		std::vector <entitySkeleton> skeletons;
