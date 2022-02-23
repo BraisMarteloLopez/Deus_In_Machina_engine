@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de origen">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Models">
+      <UniqueIdentifier>{d100cafa-3b18-4151-9eab-3b812c6b7a93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Entities">
+      <UniqueIdentifier>{006e5735-5e48-4c0c-9f07-f022e39e24ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\AuxHeadersDef">
+      <UniqueIdentifier>{6c9e6180-9529-43cd-89fd-19f7e884906b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Models">
+      <UniqueIdentifier>{d4badaba-6fb8-4026-8648-47e9d52374cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Entities">
+      <UniqueIdentifier>{83f8823b-099f-4599-9dae-055acd870798}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\RenderPipeline">
+      <UniqueIdentifier>{ba7af72a-c876-4538-b3e9-e9db5ee25d6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\RenderPipeline">
+      <UniqueIdentifier>{ed3024be-b704-43e4-a7b3-e2b89639e00e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Buffers">
+      <UniqueIdentifier>{fea626c9-631e-4ab2-8e6d-25081df8056c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\Buffers">
+      <UniqueIdentifier>{89d60f46-992c-4369-b21e-96bbdd19a935}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\World">
+      <UniqueIdentifier>{29f2fa17-2d03-43d0-8bf1-749b27f4babc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\World">
+      <UniqueIdentifier>{59d21a5a-2a04-4401-a32d-1acd9e34f853}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Deus_Ex_Machina_engine.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Entities\entity.cpp">
+      <Filter>Archivos de origen\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Models\modelLoader.cpp">
+      <Filter>Archivos de origen\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderPipeline\pipelineActions.cpp">
+      <Filter>Archivos de origen\RenderPipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="Buffers\buildBuffers.cpp">
+      <Filter>Archivos de origen\Buffers</Filter>
+    </ClCompile>
+    <ClCompile Include="World\world.cpp">
+      <Filter>Archivos de origen\World</Filter>
+    </ClCompile>
+    <ClCompile Include="_config.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AuxHeadersDef\Aux_Headers.h">
+      <Filter>Archivos de encabezado\AuxHeadersDef</Filter>
+    </ClInclude>
+    <ClInclude Include="AuxHeadersDef\Stream_Headers.h">
+      <Filter>Archivos de encabezado\AuxHeadersDef</Filter>
+    </ClInclude>
+    <ClInclude Include="AuxHeadersDef\Core_Headers.h">
+      <Filter>Archivos de encabezado\AuxHeadersDef</Filter>
+    </ClInclude>
+    <ClInclude Include="Entities\entity.h">
+      <Filter>Archivos de encabezado\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\modelLoader.h">
+      <Filter>Archivos de encabezado\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Models\compute.h">
+      <Filter>Archivos de encabezado\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderPipeline\pipelineActions.h">
+      <Filter>Archivos de encabezado\RenderPipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffers\buildBuffers.h">
+      <Filter>Archivos de encabezado\Buffers</Filter>
+    </ClInclude>
+    <ClInclude Include="_config.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="World\world.h">
+      <Filter>Archivos de encabezado\World</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
