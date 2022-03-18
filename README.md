@@ -1,7 +1,7 @@
 # DeusEx Machina engine
 C++/GL/Vulkan 3D graphic engine
 
-This proyect should be an abstraction of the engine that I am using on BOC: Birth of Civilizations, my intention is to be able to dedicate some time each month to update this openSource proyect, Deus Ex Machina is focused on performance, using most moderns indirect draw APIs avoiding API overdrive as a first mayor goal.
+This proyect should be an abstraction of the engine that I am using on BOC: Birth of Civilizations, my intention is to be able to dedicate some time each month to update this openSource proyect, Deus Ex Machina is focused on performance, using most moderns indirect draw APIs, to avoiding API overdrive as a first mayor goal.
 
 
 First commit, hello world! :D
