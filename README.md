@@ -1,7 +1,9 @@
 # DeusEx Machina engine
 C++/GL/Vulkan 3D graphic engine
 
-This proyect should be an abstraction of the engine that I am using on BOC: Birth of Civilizations, my intention is to be able to dedicate some time each month to update this openSource proyect, Deus Ex Machina is focused on performance, using most moderns indirect draw APIs, to avoiding draws API overdrive as a first mayor goal.
+This proyect should be an abstraction of the engine that I am using on BOC: Birth of Cultures, my intention is to be able to dedicate some time each month to update this openSource proyect, Deus Ex Machina is focused on performance, using most moderns indirect draw APIs, to avoiding draws API overdrive as a first mayor goal.
+
+Shaders is not a tarjet on this proyect (also how compiling/implement it), but I still can recomend Book of Shaders https://thebookofshaders.com/, so far the best online resoure that I can find.
 
 
 First commit, hello world! :D
