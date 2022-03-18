@@ -1,6 +1,9 @@
 # DeusEx Machina engine
 C++/GL/Vulkan 3D graphic engine
 
+This proyect should be an abstraction of the engine that I am using on BOC: Birth of Civilizations, my intention is to be able to dedicate some time each month to update this openSoure proyect, Deus Ex Machina is focused on performance, using indirect draw APIs avoiding API overdrive as a first mayor goal.
+
+
 First commit, hello world! :D
 Reddit post about why I started with skeletal animation system and talking about future updates: 
 https://www.reddit.com/r/BirthOfCivilization/comments/smbddl/deus_ex_machina_engine_first_public_repository/
