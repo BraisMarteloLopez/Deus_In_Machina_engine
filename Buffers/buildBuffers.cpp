@@ -39,6 +39,7 @@
 					arrayMatrix[j++] = matrixvector[i][row][column];
 
 		//
+		// no logic here !!Simple GL_buffer implementation example
 
 		glGenBuffers(1, &SSBAO_animation_units);
 
@@ -135,7 +136,7 @@
 
 		GLuint UBO_simpleSingle_block = Object_Config->nSkeletons * 4;
 
-
+		//
 		// no logic here !!Simple GL_buffer implementation example
 
 		glGenBuffers(1, &UBO_animation);
