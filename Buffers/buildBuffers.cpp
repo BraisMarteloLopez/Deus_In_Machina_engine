@@ -11,7 +11,7 @@
 	buildBuffers* buildBuffers::ObjectBuildBuffers = nullptr;
 
 	buildBuffers::buildBuffers() {}
-	buildBuffers::~buildBuffers() {}
+	buildBuffers::~buildBuffers() { delete UBO_ptr; UBO_ptr = nullptr; }
 
 	buildBuffers* buildBuffers::getInstance()
 	{
@@ -29,8 +29,9 @@
 	{
 
 
-		GLfloat* arrayMatrix = new GLfloat[matrixvector.size() * 16];
+		auto arrayMatrix = std::make_unique<GLfloat[]>(matrixvector.size() * 16);
 
+		//
 
 		for (GLuint i = 0, j = 0; i < matrixvector.size(); i++)
 			for (GLuint row = 0; row < 4; row++)
@@ -42,14 +43,11 @@
 		glGenBuffers(1, &SSBAO_animation_units);
 
 		glBindBuffer(GL_SHADER_STORAGE_BUFFER, SSBAO_animation_units);
-		glBufferData(GL_SHADER_STORAGE_BUFFER, matrixvector.size() * sizeof(glm::mat4), arrayMatrix, GL_STATIC_DRAW);
+		glBufferData(GL_SHADER_STORAGE_BUFFER, matrixvector.size() * sizeof(glm::mat4), arrayMatrix.get(), GL_STATIC_DRAW);
 
 		glBindBuffer(GL_SHADER_STORAGE_BUFFER, 0);
 
 		glBindVertexArray(0);
-
-		arrayMatrix = nullptr;
-		delete arrayMatrix;
 	}
 
 
@@ -69,7 +67,8 @@
 		UBO_size_bytes_block = UBO_elements_block * 4;
 
 		UBO_ptr = new GLint[UBO_elements_block];
-		GLint* temp_ = new GLint[3 * UBO_size_bytes_block];
+
+		auto temp_ = std::make_unique<GLfloat[]>(3 * UBO_size_bytes_block);
 		GLuint _i = 0;
 
 		//
@@ -141,13 +140,8 @@
 
 		glGenBuffers(1, &UBO_animation);
 		glBindBuffer(GL_UNIFORM_BUFFER, UBO_animation);
-		glBufferData(GL_UNIFORM_BUFFER, (4 * UBO_size_bytes_block) + (4 * UBO_simpleSingle_block), temp_, GL_DYNAMIC_DRAW);
+		glBufferData(GL_UNIFORM_BUFFER, (4 * UBO_size_bytes_block) + (4 * UBO_simpleSingle_block), temp_.get(), GL_DYNAMIC_DRAW);
 		glBindBuffer(GL_UNIFORM_BUFFER, 0);
 
 		glBindBufferRange(GL_UNIFORM_BUFFER, 0, UBO_animation, 0, 20);
-
-		//
-
-		temp_ = nullptr;
-		delete temp_;
 	}
