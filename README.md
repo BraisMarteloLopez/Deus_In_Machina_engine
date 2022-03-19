@@ -21,7 +21,7 @@ https://www.reddit.com/r/BirthOfCivilization/comments/smbddl/deus_ex_machina_eng
 
 
 # 1. MultiDraw Elements Indirect
--Upcoming NEXT update-
+-NEXT update-
 
 # 2. Multi-threading and asynchronous chunks sync
 -pending to organize-
