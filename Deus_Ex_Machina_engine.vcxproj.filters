@@ -86,7 +86,7 @@
     <ClInclude Include="Models\modelLoader.h">
       <Filter>Archivos de encabezado\Models</Filter>
     </ClInclude>
-    <ClInclude Include="Models\compute.h">
+    <ClInclude Include="Models\computeMeshes.h">
       <Filter>Archivos de encabezado\Models</Filter>
     </ClInclude>
     <ClInclude Include="RenderPipeline\pipelineActions.h">

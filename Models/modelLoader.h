@@ -6,7 +6,7 @@
 	#include <assimp/postprocess.h>
 	#include <assimp/Importer.hpp>
 	
-	#include "../Models/compute.h"
+	#include "../Models/computeMeshes.h"
 
 
 

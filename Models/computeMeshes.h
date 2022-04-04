@@ -405,6 +405,9 @@
 		std::stack<const aiNode*> stack_aiNode;
 		stack_aiNode.push(scene.mRootNode);
 
+		GLuint mPrevCountBones = 0;
+		GLuint mesh_index = 0;
+
 		while (stack_aiNode.size() > 0)
 		{
 
@@ -416,17 +419,25 @@
 			if (node->mNumMeshes > 0)
 			{
 
-				const aiMesh* const mesh = scene.mMeshes[node->mMeshes[0]];
-				assert(mesh);
+				if (scene.mMeshes[node->mMeshes[0]]->mNumBones >= mPrevCountBones)
+				{
 
-				Assimp_FillBones(scene, *mesh, bone_info);
-
-				return bone_info._next_bone_id;
+					mPrevCountBones = scene.mMeshes[node->mMeshes[0]]->mNumBones;
+					mesh_index = node->mMeshes[0];
+				}
 			}
 
 			for (GLuint i = 0; i < node->mNumChildren; ++i)
 				stack_aiNode.push(node->mChildren[i]);
 		}
+
+		//
+
+		aiMesh* mesh = scene.mMeshes[mesh_index];
+		assert(mesh);
+
+		Assimp_FillBones(scene, *mesh, bone_info);
+		return bone_info._next_bone_id;
 	}
 
 
