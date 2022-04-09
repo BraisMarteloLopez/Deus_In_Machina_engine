@@ -13,8 +13,11 @@ Here is my [Reddit post](https://www.reddit.com/r/BirthOfCivilization/comments/s
 
 # Table of Contents
 [1. MultiDraw Elements Indirect](https://github.com/BraisMarteloLopez/Deus_Ex_Machina_engine#1-multidraw-elements-indirect)
+
 [2. Multi-threading and Asynchronous Chunks Sync](https://github.com/BraisMarteloLopez/Deus_Ex_Machina_engine#2-multi-threading-and-asynchronous-chunks-sync)
+
 [3. Interface Items System](https://github.com/BraisMarteloLopez/Deus_Ex_Machina_engine#3-interface-items-system)
+
 [4. Skeleton Animation](https://github.com/BraisMarteloLopez/Deus_Ex_Machina_engine#4-skeleton-animation)
 
 - [ ] More content coming in the near future, watch this space!
