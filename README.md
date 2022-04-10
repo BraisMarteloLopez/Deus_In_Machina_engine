@@ -60,11 +60,13 @@ classDiagram
       bone ids [ ]
     }
     class SSBO_Buffer_static_draw{
-      mat4 array_transformations
+      mat4 array_transformations[]
+      
     }
     class UBO_Buffer_dynamic_draw{
-      animationPlaytime index
-      Skeleton index
+      Skeleton index[skeletons][animations]
+      animationPlaytime[skeletons][animations]
+      keyframesLimit[skeletons][animations]
     }
 ```
 (pending to end update)
