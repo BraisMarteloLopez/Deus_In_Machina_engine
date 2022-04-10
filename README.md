@@ -55,7 +55,7 @@ classDiagram
     }
     class entitySkeletalAnimations{
       vector#60;entitySkeleton#62; skeletons
-      vector#60;mat4#62; stack_animations
+      vector#60;mat4#62; stackTransformations
     }
     class Mesh{
       ...vertex attributes
@@ -64,11 +64,11 @@ classDiagram
       bone ids [ ]
     }
     class SSBO_Buffer_static_draw{
-      mat4 array_transformations[]
+      mat4 array_StackTransformations[]
       
     }
     class UBO_Buffer_dynamic_draw{
-      Skeleton index[skeletons][animations]
+      skeleton index[skeletons][animations]
       animationPlaytime[skeletons][animations]
       keyframesLimit[skeletons][animations]
     }
