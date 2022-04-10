@@ -37,7 +37,7 @@ Skeleton animation system should not have numbers restrictions on how many skele
 
 The first one is static (SSBO) while the other is dynamic (UBO), GPU allows the interpolation between two final positions on shader, while is the CPU that only takes care to computing animations play-time. 
 
-There are no forms of uniform over-load, the uniform buffer object is the only point to sync, (the 32 kb size of that guarantees a fast cpu<->gpu update). All animations transforms are pre-computed inside the static buffer SSBO to avoid extra CPU load on runtime, his max size of 128mb guarranted a lot of capacity to fill large ammount of pre-computed transforms from many diferentes animations for each skeleton.
+There are no uniform over-load, the uniform buffer object is the only point to sync, (the 32 kb size of that guarantees a fast cpu<->gpu update). All animations transforms are pre-computed inside the static buffer SSBO to avoid extra CPU load on runtime, his max size of 128mb guarranted a lot of capacity to fill large ammount of pre-computed transforms from many diferentes animations for each skeleton.
 
 <!-- ![Atlas_animations](https://user-images.githubusercontent.com/5490676/152707323-daf85571-5b85-4b25-a434-c0bee2b82e67.jpg) -->
 ## Simplified data atlas
