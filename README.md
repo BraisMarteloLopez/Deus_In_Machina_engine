@@ -9,7 +9,7 @@ Shaders aren't a target on this project (compiling/implement are out of this), b
 First commit, hello world! :D
 Here is my [Reddit post](https://www.reddit.com/r/BirthOfCivilization/comments/smbddl/deus_ex_machina_engine_first_public_repository/) about why I started with a skeletal animation system. Additionally, I also discuss the future updates for this project.
 
-[notice: until BoC early access release, I will delay the frequency updates for this repository]
+[notice: until BoC early access release, I will delay the frequency of the updates for this repository]
 
 
 # Table of Contents
