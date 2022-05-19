@@ -1,7 +1,7 @@
-# DeusEx Machina engine
+# Deus In Machina engine
 C++/GL/Vulkan 3D graphic engine
 
-This project should be an abstraction of the engine that I am using on [BOC: Birth of Cultures](https://store.steampowered.com/app/1159150/BOC/), my intention is to be able to dedicate some time each month to update this OpenSource project, Deus Ex Machina is focused on performance, using most moderns indirect draw APIs, to avoid drawing API overdrive as a first major goal.
+This project should be an abstraction of the engine that I am using on [BOC: Birth of Cultures](https://store.steampowered.com/app/1159150/BOC/), my intention is to be able to dedicate some time each month to update this OpenSource project, Deus In Machina is focused on performance, using most moderns indirect draw APIs, to avoid drawing API overdrive as a first major goal.
 
 Shaders aren't a target on this project (compiling/implement are out of this), but I still can recommend the [Book of Shaders](https://thebookofshaders.com/), which so far is the best online resource that I could find.
 
@@ -10,6 +10,7 @@ First commit, hello world! :D
 Here is my [Reddit post](https://www.reddit.com/r/BirthOfCivilization/comments/smbddl/deus_ex_machina_engine_first_public_repository/) about why I started with a skeletal animation system. Additionally, I also discuss the future updates for this project.
 
 [notice: until BoC early access release, I will delay the frequency of the updates for this repository]
+[Project renamed to: Deus In Machina]
 
 
 # Table of Contents
